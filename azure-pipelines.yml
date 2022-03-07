@@ -4,7 +4,12 @@
 # https://docs.microsoft.com/azure/devops/pipelines/languages/java
 
 trigger:
-- master
+  - main
+  - releases/*
+
+pr:
+  - main
+  - releases/*
 
 pool:
   vmImage: windows-latest
